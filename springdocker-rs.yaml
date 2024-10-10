@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: springdocker-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springdocker-rs
+  template:
+    metadata:
+      labels:
+        app: springdocker-rs
+    spec:
+      containers:
+        - name: springdocker-rs-pod
+          image: utk1311/springdockerv2
+          ports:
+          -  containerPort: 8080

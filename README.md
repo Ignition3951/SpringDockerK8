@@ -1,0 +1,1 @@
+Project to explain spring containerization and deployment with the help of Kubernetes.

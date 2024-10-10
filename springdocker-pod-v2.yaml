@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: springdocker-manual-v2
+  labels:
+    creation_method: manual
+    env: dev
+spec:
+  containers:
+  - name: springdocker-manual-v2
+    image: utk1311/springdockerv2
+    ports: 
+    - containerPort: 8080     
+      protocol: TCP

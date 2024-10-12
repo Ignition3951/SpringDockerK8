@@ -16,4 +16,4 @@ spec:
         - name: springdocker-rs-pod
           image: utk1311/springdockerv2
           ports:
-          -  containerPort: 8080
+          -  containerPort: 8080 #The port is the docker port on which it is running

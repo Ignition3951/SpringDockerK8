@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springdocker-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 8081 #Port is the port configured in your application.properties file in spring
+  selector:
+    app: springdocker-rs

@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: springdocker-ingress
+spec:
+  rules:
+  - host: utk.example.com #host entry of 127.0.0.1 utk.example.com need to be created in C:\Windows\System32\drivers\etc\hosts file
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service: 
+            name: springdocker-nodeport123
+            port:
+              number: 8081
